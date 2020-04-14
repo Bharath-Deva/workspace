@@ -1,0 +1,20 @@
+101,B.E. Aeronautical Engineering
+102,B.E. Automobile Engineering
+103,B.E. Civil Engineering
+104,B.E. Computer Science and Engineering
+105,B.E. Electrical and Electronics Engineering
+106,B.E. Electronics and Communication Engineering
+107,B.E. Electronics and Instrumentation Engineering
+112,B.E. Instrumentation and Control Engineering
+113,B.E. Marine Engineering
+114,B.E. Mechanical Engineering
+120,B.E. Production Engineering
+121,B.E. Biomedical Engineering
+184,B.E. Electronics And Communication Engineering(Part
+185,B.E. Mechanical Engineering(Part Time)
+203,B.Tech. Chemical Engineering
+205,B.Tech. Information Technology
+212,B.Tech. Textile Technology
+214,B.Tech. Biotechnology
+216,B.Tech. Textile Technology(Fashion Technology)
+219,B.Tech. Petroleum Engineering

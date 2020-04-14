@@ -4,6 +4,8 @@ def gen():
         s=n*n
         yield s
         n+=1
+
 a=gen()
+
 for i in a:
     print(i)
