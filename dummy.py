@@ -1,4 +1,6 @@
-with open("dummy.txt",mode="r") as m:
-    a=m.read().split("\n")
-    print(a)
-        
+a = input()
+if(a.count("(") == a.count(")")):
+    s=[]
+    d={""}
+    for i in a:
+        if i 
