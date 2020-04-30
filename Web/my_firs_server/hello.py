@@ -1,16 +1,19 @@
-from flask import Flask , render_template ,url_for
+from flask import Flask, redirect, url_for
 app = Flask(__name__)
 
-@app.route('/<int>')
-def hello_world(username=None):
-    return render_template('text.html',name=username)
+@app.route('/admin')
+def hello_admin():
+   return 'Hello Admin'
 
-@app.route('/')
-def blog():
-    return 'hey this is my blog!'
+@app.route('/guest/<guest>')
+def hello_guest(guest):
+   return 'Hello %s as Guest' % guest
 
-@app.route('/dog')
-def hello():
-    return 'Hey this is my Nesamani'
+@app.route('/user/<name>')
+def hello_user(name):
+   if name =='admin':
+      print("a")
+   else:
+      return redirect(url_for('hello_guest',guest = name))
 
 app.run()
