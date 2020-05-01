@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request ,redirect
 import csv
+import os
 
 action = ""
 app = Flask(__name__)
@@ -8,6 +9,9 @@ def to_database(data):
     with open('database.csv', mode = "a", newline='') as database:
         field_names = ['Name', 'Gender', 'Salary', 'E-mail', 'Phone number']
         csv_w = csv.DictWriter(database, fieldnames = field_names, delimiter = ",")
+        filesize = os.path.getsize('database.csv')
+        if filesize == 0:
+            csv_w.writeheader()
         csv_w.writerow(data)
         return 0
 
