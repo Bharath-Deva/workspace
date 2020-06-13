@@ -1,0 +1,39 @@
+body {
+  background-color: gray;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+  width: 50%;
+  background-image: url("background-clouds.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: auto;
+  text-align: center;
+  margin-top: 10%;
+  border: 2px solid black;
+}
+
+.country_list {
+  display: flex;
+  justify-content: center;
+}
+
+.country_list div {
+  padding: 20px;
+  background-color: #ffffff;
+  border: 2px solid black;
+  position: relative;
+  animation: result;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes result {
+  0% {
+    left: -500px;
+  }
+  100% {
+    left: 0px;
+  }
+}

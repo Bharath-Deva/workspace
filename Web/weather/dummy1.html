@@ -1,0 +1,12 @@
+from urllib.request import urlopen
+
+url = f'http://api.openweathermap.org/data/2.5/weather?q=republic of india&appid=eac7f9665ef2bdb0e603d3c9fc94c3b6&units=metric'
+print(url)
+url_response = urlopen(url)
+weather_data = url_response.read()
+print(weather_data)
+
+
+http://api.openweathermap.org/data/2.5/weather?q=Republic%20of%20India&appid=eac7f9665ef2bdb0e603d3c9fc94c3b6&units=metric
+
+http://api.openweathermap.org/data/2.5/weather?q=Republic%of%India&appid=eac7f9665ef2bdb0e603d3c9fc94c3b6&units=metric

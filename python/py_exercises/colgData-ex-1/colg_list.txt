@@ -1,0 +1,40 @@
+4202,1323,A.C.T. College of Engineering and Technology
+4101,1233,Adhi College of Engineering and Technology
+4204,1401,Adhiparasakthi Engineering College
+3128,1316,Agni College of Technology
+3101,1303,Anand Institute of Higher Technology
+2102,1230,Apollo Engineering College
+2103,1201,Arignar Anna Institute of Science and Technology
+4103,1232,ARM College of Engineering and Technology
+4105,1334,A R S College of Engineering
+3129,1145,Anand School of Architecture
+4130,1133,Annai Veilankanni’s College of Engineering
+3102,1435,Balaji Institute of Engineering and Technology
+4208,1444,Chendu College of Engineering and Technology
+2104,1399,Chennai Institute of Technology
+2105,1202,D.M.I. College of Engineering
+4106,1424,Dhaanish Ahmed College of Engineering
+4107,1405,Dhanalakshmi College of Engineering
+3105,1322,Dhanalakshmi Srinivasan College of Engineering and Technology
+3130,1138,Da Vinci School of Design and Architecture
+4108,1407,G.K.M. College of Engineering and Technology
+4111,1234,Indira Gandhi College of Engineering and Technology for Women
+5110,1235,JEI Mathaajee College of Engineering
+3108,1306,Jeppiaar Engineering College
+2106,1140,Jeppiaar Institute of Technology
+3120,1320,Jeppiaar SRR Engineering College
+2110,1206,Jeppiaar Maamallan Engineering College
+3109,1307,Jerusalem College of Engineering (Autonomous)
+3110,1311,K.C.G. College of Technology
+5112,1208,Kanchi Pallavan Engineering College
+4212,1409,Karpaga Vinayaga College of Engineering and Technology
+2108,1207,Kings Engineering College
+4113,1205,Lord Venkateshwaraa Engineering College
+2109,1225,Loyola Institute of Technology
+2111,1411,Madha Engineering College
+2112,1243,Madha Institute of Engineering and Technology
+3116,1310,Misrimal Navajee munoth Jain Engineering College
+3117,1400,Mohammed Sathak A.J. Academy of Architecture
+3118,1301,Mohammed Sathak AJ College of Engineering
+3131,1146,Misrimal Navajee Munoth Jain School of Architecture
+3112,1130,MARG Institute of Design & Architecture Swarnabhoomi (MIDAS)
