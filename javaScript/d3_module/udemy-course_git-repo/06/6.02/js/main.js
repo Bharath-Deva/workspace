@@ -4,17 +4,17 @@
 *    6.2 - Adding a legend
 */
 
-var margin = { left:80, right:20, top:50, bottom:100 };
-var height = 500 - margin.top - margin.bottom, 
+var margin = { left: 80, right: 20, top: 50, bottom: 100 };
+var height = 500 - margin.top - margin.bottom,
     width = 800 - margin.left - margin.right;
 
 var g = d3.select("#chart-area")
     .append("svg")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
     .append("g")
-        .attr("transform", "translate(" + margin.left + 
-            ", " + margin.top + ")");
+    .attr("transform", "translate(" + margin.left +
+        ", " + margin.top + ")");
 
 var time = 0;
 
@@ -27,7 +27,7 @@ var y = d3.scaleLinear()
     .range([height, 0])
     .domain([0, 90]);
 var area = d3.scaleLinear()
-    .range([25*Math.PI, 1500*Math.PI])
+    .range([25 * Math.PI, 1500 * Math.PI])
     .domain([2000, 1400000000]);
 var continentColor = d3.scaleOrdinal(d3.schemePastel1);
 
@@ -46,7 +46,7 @@ var yLabel = g.append("text")
     .attr("text-anchor", "middle")
     .text("Life Expectancy (Years)")
 var timeLabel = g.append("text")
-    .attr("y", height -10)
+    .attr("y", height - 10)
     .attr("x", width - 40)
     .attr("font-size", "40px")
     .attr("opacity", "0.4")
@@ -59,12 +59,12 @@ var xAxisCall = d3.axisBottom(x)
     .tickFormat(d3.format("$"));
 g.append("g")
     .attr("class", "x axis")
-    .attr("transform", "translate(0," + height +")")
+    .attr("transform", "translate(0," + height + ")")
     .call(xAxisCall);
 
 // Y Axis
 var yAxisCall = d3.axisLeft(y)
-    .tickFormat(function(d){ return +d; });
+    .tickFormat(function (d) { return +d; });
 g.append("g")
     .attr("class", "y axis")
     .call(yAxisCall);
@@ -72,10 +72,10 @@ g.append("g")
 var continents = ["europe", "asia", "americas", "africa"];
 
 var legend = g.append("g")
-    .attr("transform", "translate(" + (width - 10) + 
+    .attr("transform", "translate(" + (width - 10) +
         "," + (height - 125) + ")");
 
-continents.forEach(function(continent, i){
+continents.forEach(function (continent, i) {
     var legendRow = legend.append("g")
         .attr("transform", "translate(0, " + (i * 20) + ")");
 
@@ -92,29 +92,30 @@ continents.forEach(function(continent, i){
         .text(continent);
 });
 
-d3.json("data/data.json").then(function(data){
+d3.json("data/data.json").then(function (data) {
     console.log(data);
 
     // Clean data
-    const formattedData = data.map(function(year){
-        return year["countries"].filter(function(country){
+    const formattedData = data.map(function (year) {
+        return year["countries"].filter(function (country) {
             var dataExists = (country.income && country.life_exp);
             return dataExists
-        }).map(function(country){
+        }).map(function (country) {
             country.income = +country.income;
             country.life_exp = +country.life_exp;
-            return country;            
+            return country;
         })
     });
 
     // Run the code every 0.1 second
-    d3.interval(function(){
+    d3.interval(function () {
         // At the end of our data, loop back
-        time = (time < 214) ? time+1 : 0
-        update(formattedData[time]);            
+        time = (time < 214) ? time + 1 : 0
+        update(formattedData[time]);
     }, 100);
 
     // First run of the visualization
+    console.log(formattedData[0])
     update(formattedData[0]);
 
 })
@@ -125,7 +126,7 @@ function update(data) {
         .duration(100);
 
     // JOIN new data with old elements.
-    var circles = g.selectAll("circle").data(data, function(d){
+    var circles = g.selectAll("circle").data(data, function (d) {
         return d.country;
     });
 
@@ -138,12 +139,12 @@ function update(data) {
     circles.enter()
         .append("circle")
         .attr("class", "enter")
-        .attr("fill", function(d) { return continentColor(d.continent); })
+        .attr("fill", function (d) { return continentColor(d.continent); })
         .merge(circles)
         .transition(t)
-            .attr("cy", function(d){ return y(d.life_exp); })
-            .attr("cx", function(d){ return x(d.income) })
-            .attr("r", function(d){ return Math.sqrt(area(d.population) / Math.PI) });
+        .attr("cy", function (d) { return y(d.life_exp); })
+        .attr("cx", function (d) { return x(d.income) })
+        .attr("r", function (d) { return Math.sqrt(area(d.population) / Math.PI) });
 
     // Update the time label
     timeLabel.text(+(time + 1800))
