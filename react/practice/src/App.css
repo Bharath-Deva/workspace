@@ -1,3 +1,9 @@
 .App {
   text-align: center;
 }
+
+.Person {
+  border: black dotted 1px;
+  margin: 20px;
+  padding: 10px;
+}

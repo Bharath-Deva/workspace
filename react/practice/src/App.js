@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './App.css';
+import style from './App.css';
 import Persons from './Components/Persons/Persons'
 
 export default class App extends Component {
@@ -53,7 +53,7 @@ export default class App extends Component {
     }
 
     return (
-      <div className='App'>
+      <div className="App">
         <h1>Persons</h1>
         <button onClick={this.togglePersons}>Toggle</button>
         {persons}
